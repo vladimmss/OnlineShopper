@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="widrh=device-width initial-scale=1.0">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+        <title>OnlineShopper</title>
+    </head>
+
+<header>
+    <nav>
+        <div class="mainwindow">
+            <div class="logo">
+                <a href="{{ url_for('home') }}">OnlineShopper</a>
+            </div>
+            <ul>
+                <li><a href="{{ url_for('catalog') }}">Каталог</a></li>
+                <li><a href="{{ url_for('contacts') }}">Контакты</a></li>
+                <li><a href="{{ url_for('feedback') }}">Отзывы</a></li>
+                <li><a href="{{ url_for('support') }}">Поддержка</a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+{% block content %}{% endblock %}
+
+</html>
