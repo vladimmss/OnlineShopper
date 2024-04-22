@@ -1,4 +1,17 @@
 {% extends "base.html" %}
 
 {% block content %}
+    <body>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+        {% if current_user.is_authenticated %}
+            <div class="button-group">
+                <button><a href="{{ url_for('logout') }}">Выйти</a></button>
+            </div>
+        {% else %}
+        <div class="button-group">
+            <button><a href="{{ url_for('login') }}">Войти</a></button>
+            <button><a href="{{ url_for('registration') }}">Зарегистрироваться</a></button>
+        </div>
+        {% endif %}
+    </body>
 {% endblock %}

@@ -1,4 +1,55 @@
-{% extends "base.html" %}
+<!DOCTYPE html>
+<html lang="ru">
 
-{% block content %}
-{% endblock %}
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/feedback.css') }}"/>
+      <title>OnlineShopper</title>
+  </head>
+
+  <body>
+
+    <div class="container">
+
+      <div class="content">
+
+        <div class="left-side">
+          <div class="btn">
+                <input type="button" onclick="history.back()" value="Назад" />
+              </div>
+          <div class="phone details">
+            <i class="fas fa-phone-alt"></i>
+            <div class="topic">Телефон</div>
+            <div class="text-one">Номер телефона 1</div>
+            <div class="text-two">Номер телефона 2</div>
+          </div>
+        </div>
+
+        <div class="right-side">
+
+          <div class="topic-text">Оставьте свой отзыв!</div>
+          <h6>{{ message }}</h6>
+
+          <form action="#">
+
+            <div class="input-box">
+              <input type="text" id="1" name="1" placeholder="Введите email" />
+            </div>
+            <div class="input-box message-box">
+              <textarea id="2" name="2" placeholder="Поделитесь вашими пожеланиями с нами"></textarea>
+            </div>
+            <div class="button">
+              <input type="submit" value="Отправить" />
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://kit.fontawesome.com/fce9a50d02.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

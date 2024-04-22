@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+    <title>OnlineShopper</title>
+    <body>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/registration.css') }}">
+      <div class="container">
+        <h2>Регистрация</h2>
+          <h6> {{ message }} </h6>
+        <form action="" method="post">
+
+            <h3>Имя:</h3>
+          <input type="text" id="name" name="name" placeholder="Введите имя..." required>
+
+          <h3>Электронная почта:</h3>
+          <input type="email" id="email" name="email" placeholder="Введите адрес электронной почты..." required>
+
+          <h3>Пароль:</h3>
+          <input type="password" id="password1" name="password1" placeholder="Введите пароль..." required>
+
+          <h3>Повторите пароль:</h3>
+          <input type="password" id="password2" name="password2" placeholder="Введите пароль повторно..." required>
+
+          <button type="submit">Зарегистрироваться</button>
+            <p>Уже зарегистрированы? <a href="{{ url_for('login') }}">Войдите в систему</a>.</p>
+        </form>
+      </div>
+    </body>

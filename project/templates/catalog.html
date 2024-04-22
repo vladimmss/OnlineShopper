@@ -3,6 +3,12 @@
 {% block content %}
     <body>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/cards.css') }}">
+        <div class="container" >
+	        <div class="search-box">
+		        <input type="text"/>
+		        <span></span>
+	        </div>
+        </div>
         <div class="cards">
             <div class="card">
                 <div class="card_top">
@@ -18,7 +24,7 @@
                     <a href="#" class="card_title">
                       Rick Owens Ramones Mainline
                     </a>
-                    <button class="card_add">В корзину</button>
+                    <button class="card_add" title="Товар добавлен в корзину">В корзину</button>
                   </div>
             </div>
             <div class="card">
